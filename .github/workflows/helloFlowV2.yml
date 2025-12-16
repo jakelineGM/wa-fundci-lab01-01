@@ -1,5 +1,6 @@
 name: Hello Flow
 on:
+  workflow_dispatch:
   schedule:
     - cron: '* * * * *'
 jobs:
@@ -10,7 +11,7 @@ jobs:
         run: echo "Hello World!"
 
       - name: Mostrar trigger
-        run: echo "Trigger: $GITHUB_EVENT_NAME"
+        run: echo "Trigger:$GITHUB_EVENT_NAME"
 
       - name: Diga vale
         run: echo "Valeu - bye!"
