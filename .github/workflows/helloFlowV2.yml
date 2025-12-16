@@ -6,6 +6,8 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Mostrar trigger
+        run: echo "Trigger: $GITHUB_EVENT_NAME"
       - name: Diga oi
         run: echo "Hello World!"
       - name: Diga vale
